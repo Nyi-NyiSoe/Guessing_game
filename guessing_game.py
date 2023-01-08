@@ -85,6 +85,9 @@ def gameStart():
         bet = get_bet()
         print("*" * 60)
         times = get_multiplier()
+        if bet * times > money:
+            print('Your betting amount is higher than your money!!')
+            quit()
         print("*" * 60)
         number = print_randomDice()
         
